@@ -1,0 +1,20 @@
+$palette: (
+  primary: #000,
+  secondary: #676969,
+  danger: #ca2727,
+  success: #1ebe26,
+  background: #d6d6d6,
+  button: #2453d4,
+  hover-bg: #f4f6f8,
+  border-line: #e2e2e2,
+  pure: #fff,
+  dark: #000,
+  card-border: rgb(238, 240, 241),
+  transparent: rgba(238, 240, 241, 0),
+);
+
+$break-point: rem(600px);
+
+.cursor {
+  cursor: pointer;
+}

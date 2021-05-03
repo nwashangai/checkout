@@ -1,0 +1,108 @@
+@import 'sass-rem';
+@import './assets/variables';
+
+.App {
+  position: relative;
+  height: 100%;
+  max-width: rem(1000px);
+  margin: auto;
+  padding: 0 rem(10px);
+
+  h1 {
+    text-align: center;
+  }
+
+  &__show-mail {
+    display: block;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    > span {
+      margin: auto;
+      text-align: center;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(40px);
+  }
+}
+
+.payment,
+.summary {
+  padding: rem(15px);
+}
+
+.payment > p {
+  display: flex;
+  justify-content: start;
+  border-bottom: map-get($palette, border-line);
+}
+
+.payment > div {
+  margin-bottom: rem(10px);
+}
+
+.payment > div:nth-child(3) {
+  display: flex;
+  justify-content: space-between;
+
+  > div {
+    width: 48% !important;
+  }
+}
+
+.summary > p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary > p:first-child,
+.summary > p:nth-child(4) {
+  > span:first-child {
+    font-weight: bold;
+  }
+}
+
+.summary > p:first-child {
+  margin-bottom: rem(15px);
+  padding-bottom: rem(15px);
+  border-bottom: rem(1px) solid map-get($palette, border-line);
+}
+
+.summary > p:nth-child(4) {
+  margin-top: rem(15px);
+  padding-top: rem(15px);
+  border-top: rem(1px) solid map-get($palette, border-line);
+}
+
+.summary > p:last-child {
+  margin-top: rem(40px);
+}
+
+::-webkit-scrollbar {
+  background: transparent; /* make scrollbar transparent */
+  width: 0;
+}
+
+.error-message {
+  color: #c22020;
+}
+
+.success-message {
+  color: #6ec220;
+}
+
+@media (max-width: 500px) {
+  .App {
+    main {
+      flex-direction: column;
+    }
+  }
+}

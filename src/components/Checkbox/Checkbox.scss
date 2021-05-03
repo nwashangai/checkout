@@ -1,0 +1,11 @@
+@import 'sass-rem';
+@import '../../assets/variables';
+
+.checkbox {
+  display: flex;
+  margin-right: rem(20px);
+
+  > span {
+    margin-left: rem(3px);
+  }
+}
